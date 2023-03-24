@@ -1,9 +1,20 @@
+import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import "./globals.css"
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: "Portfólio | Kayky de Sousa",
 	description: "Portfólio | Kayky de Sousa",
+	icons: {
+		icon: {
+			url: "/favicon.svg",
+			type: "image/svg",
+		},
+		shortcut: {
+			url: "/favicon.svg",
+			type: "image/svg",
+		},
+	},
 }
 
 const roboto = Roboto({
