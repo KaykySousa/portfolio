@@ -1,3 +1,4 @@
+import ProjectImage1 from "@/assets/30-projects-30-days.png"
 import Link from "next/link"
 import ProjectCard from "../ProjectCard"
 
@@ -10,7 +11,7 @@ export default function Projects() {
 			<div className="mt-6 grid w-full flex-1 grid-cols-1 gap-2 md:grid-cols-2">
 				<ProjectCard
 					title="Desafio - 30 Projetos em 30 Dias"
-					image="/30-projects-30-days.png"
+					image={ProjectImage1}
 					projectUrl="https://day30-all-projects-kaykysousa.vercel.app/"
 					description="Desafio pessoal com o objetivo de criar um novo projeto
 						web a cada dia, por um período de 30 dias consecutivos.
@@ -18,18 +19,6 @@ export default function Projects() {
 						progresso no LinkedIn, a fim de documentar todo o meu
 						processo de aprendizado."
 				/>
-				{/* <ProjectCard
-					title="Em breve"
-					image=""
-					projectUrl="#"
-					description="Em breve"
-				/>
-				<ProjectCard
-					title="Em breve"
-					image=""
-					projectUrl="#"
-					description="Em breve"
-				/> */}
 			</div>
 			<Link
 				href="https://github.com/KaykySousa"

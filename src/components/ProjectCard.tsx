@@ -1,7 +1,9 @@
+import type { StaticImageData } from "next/image"
+import Image from "next/image"
 import ButtonLink from "./ButtonLink"
 
 interface ProjectCardProps {
-	image: string
+	image: StaticImageData
 	title: string
 	description: string
 	projectUrl: string
@@ -17,7 +19,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
 	return (
 		<div className="group relative aspect-square w-full border border-neutral-900 bg-neutral-300">
-			<img
+			<Image
 				src={image}
 				alt={title}
 				className="h-full w-full object-cover transition group-hover:grayscale"

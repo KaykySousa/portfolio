@@ -1,3 +1,6 @@
+import ProfilePicture from "@/assets/profile_picture.jpg"
+import Image from "next/image"
+
 export default function Main() {
 	return (
 		<section className="relative flex min-h-screen w-full snap-start items-start justify-start bg-neutral-50 p-6 sm:p-20 lg:h-screen">
@@ -11,10 +14,11 @@ export default function Main() {
 						DESENVOLVEDOR FRONT-END JR.
 					</p>
 				</div>
-				<img
-					src="/profile_picture.jpg"
+				<Image
+					src={ProfilePicture}
 					alt="Foto de perfil de Kayky de Sousa"
-					className="relative mt-4 block aspect-square w-full bg-neutral-400 object-cover object-[100%_30%] shadow-[8px_8px_0px_0px_#171717] grayscale lg:m-0 lg:h-full lg:max-h-[36rem] lg:w-auto min-[1200px]:max-h-[42rem]"
+					className="relative mt-4 block aspect-square w-full bg-neutral-400 object-cover shadow-[8px_8px_0px_0px_#171717] lg:m-0 lg:h-full lg:max-h-[36rem] lg:w-auto min-[1200px]:max-h-[42rem]"
+					priority
 				/>
 				<div className="absolute left-20 right-28 hidden justify-self-start lg:block">
 					<h1 className="text-stroke justify-self-start text-6xl font-bold text-transparent min-[288px]:text-7xl min-[384px]:text-8xl lg:text-[160px] min-[1200px]:text-[192px]">
