@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image"
 import Image from "next/image"
-import ButtonLink from "./ButtonLink"
+import Link from "next/link"
 
 interface ProjectCardProps {
 	image: StaticImageData
@@ -8,6 +8,7 @@ interface ProjectCardProps {
 	description: string
 	projectUrl: string
 	githubUrl?: string
+	tags?: string[]
 }
 
 export default function ProjectCard({
@@ -16,28 +17,29 @@ export default function ProjectCard({
 	projectUrl,
 	title,
 	githubUrl,
+	tags,
 }: ProjectCardProps) {
 	return (
-		<div className="group relative aspect-square w-full border border-neutral-900 bg-neutral-300">
+		<Link href={projectUrl} className="group w-full max-w-sm">
 			<Image
 				src={image}
 				alt={title}
-				className="h-full w-full object-cover transition group-hover:grayscale"
+				className="aspect-square w-full border border-neutral-900 object-cover grayscale transition group-hover:grayscale-0"
 			/>
-			<div className="absolute top-0 left-0 flex h-full w-full flex-col items-start justify-between bg-neutral-900 bg-opacity-90 p-6 text-white opacity-0 transition group-hover:opacity-100 lg:p-12">
-				<div>
-					<p className="mb-4 text-xl font-bold uppercase lg:text-3xl">
-						{title}
-					</p>
-					<p className="lg:text-lg">{description}</p>
+			<div className="mt-2">
+				<h1 className="text-lg font-semibold">{title}</h1>
+				<p className="mt-1 text-justify">{description}</p>
+				<div className="mt-2 flex w-full flex-wrap gap-1">
+					{tags?.map((tag, index) => (
+						<div
+							key={index}
+							className="rounded bg-neutral-900 px-2 py-0.5 text-sm text-white"
+						>
+							{tag}
+						</div>
+					))}
 				</div>
-				<ButtonLink
-					href={projectUrl}
-					className="!bg-white !text-neutral-900 hover:!bg-neutral-900 hover:!text-white"
-				>
-					VER PROJETO
-				</ButtonLink>
 			</div>
-		</div>
+		</Link>
 	)
 }
