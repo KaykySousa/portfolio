@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function Contact() {
 	return (
-		<section className="relative flex w-full snap-start flex-col items-start justify-start bg-white p-6 text-neutral-900 sm:p-20">
+		<section className="relative flex w-full snap-start flex-col items-start justify-start bg-white p-8 text-neutral-900 sm:p-16">
 			<p className="text-xl text-neutral-900">GOSTOU DO MEU PERFIL?</p>
 			<h1 className="text-5xl font-bold min-[384px]:text-6xl lg:text-7xl">
 				ENTRE EM CONTATO!

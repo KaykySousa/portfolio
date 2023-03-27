@@ -1,13 +1,13 @@
 export default function About() {
 	return (
 		<section
-			className="relative flex w-full snap-start flex-col items-start justify-start bg-white p-6 text-neutral-900 sm:p-20 lg:min-h-screen"
+			className="relative flex w-full snap-start flex-col items-start justify-start bg-white p-8 text-neutral-900 sm:p-16"
 			id="about"
 		>
 			<h1 className="text-5xl font-bold min-[384px]:text-6xl lg:text-7xl">
 				SOBRE
 			</h1>
-			<div className="mt-4 mb-4 flex max-w-3xl flex-1 flex-col justify-center gap-y-4 text-justify lg:text-lg">
+			<div className="mt-8 mb-8 flex max-w-3xl flex-1 flex-col justify-center gap-y-4 text-justify lg:text-lg">
 				<p>
 					Programador, entusiasta da tecnologia, em constante
 					aprendizado e buscando uma primeira oportunidade
